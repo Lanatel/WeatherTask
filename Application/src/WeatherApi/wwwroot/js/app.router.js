@@ -10,12 +10,14 @@
             })
             .when("/forecastIO", {
                 templateUrl: "./client/home/forecast.view.html",
-                controller: "ForecastCtrl"
+                controller: "ForecastCtrl",
+                controllerAs: "fc"
 
             })
             .when("/worldWeather", {
                 templateUrl: "./client/home/forecast.view.html",
-                controller: "WorldWeatherCtrl"
+                controller: "WorldWeatherCtrl",
+                controllerAs: "fc"
             })
 
         // $locationProvider.html5Mode(true);

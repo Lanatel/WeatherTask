@@ -7,6 +7,7 @@
     function ForecastCtrl($http) {
         const fc = this;
 
+        fc.name = "Forecast IO";
         fc.getCities = function(val) {
             console.log(val);
 
@@ -26,7 +27,10 @@
 
     weatherApp.controller('WorldWeatherCtrl', WorldWeatherCtrl);
 
-    function WorldWeatherCtrl($scope) {
-        $scope.name = 'World Weather';
+
+    function WorldWeatherCtrl() {
+        const fc = this;
+        fc.name = "World Weather";
+        console.log(fc.name);
     }
 })();
