@@ -8,13 +8,13 @@
             .when("/", {
                 templateUrl: "./client/home/main.view.html"
             })
-            .when("/forecastIO", {
+            .when("/forecast-io", {
                 templateUrl: "./client/home/forecast.view.html",
                 controller: "ForecastCtrl",
                 controllerAs: "fc"
 
             })
-            .when("/worldWeather", {
+            .when("/world-weather", {
                 templateUrl: "./client/home/forecast.view.html",
                 controller: "WorldWeatherCtrl",
                 controllerAs: "fc"
