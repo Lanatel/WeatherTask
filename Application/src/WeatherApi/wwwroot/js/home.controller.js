@@ -8,19 +8,18 @@
         const fc = this;
 
         fc.name = "Forecast IO";
-        fc.getCities = function(val) {
-            console.log(val);
+        fc.getCities = function(val){
 
-            return $http.get('//maps.googleapis.com/maps/api/geocode/json', {
-              params: {
-                address: val,
-                sensor: false
-              }
-            }).then(function(response){
-              return response.data.results.map(function(item){
-                return item.formatted_address;
-              });
+            return $http.get('api/cities/search', {
+             params: {
+                byName : val
+             }
+            }).then(function(response){ console.log(response.data);
+
+                return response.data.map(function(item){
+            return item.description;
             });
+        });
         };
     }
 
@@ -28,9 +27,26 @@
     weatherApp.controller('WorldWeatherCtrl', WorldWeatherCtrl);
 
 
-    function WorldWeatherCtrl() {
+    function WorldWeatherCtrl( $http) {
         const fc = this;
         fc.name = "World Weather";
         console.log(fc.name);
-    }
+
+        fc.getCities = function(val){
+
+            return $http.get('api/cities/search', {
+             params: {
+                byName : val
+             }
+            }).then(function(response){ console.log(response.data);
+
+                return response.data.map(function(item){
+            return item.description;
+            });
+        });
+    };
+
+
+}
+
 })();
