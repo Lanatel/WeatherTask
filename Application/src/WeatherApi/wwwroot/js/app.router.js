@@ -3,7 +3,7 @@
 
     var weatherApp =  angular.module('weatherApp');
 
-    weatherApp.config(['$routeProvider', '$locationProvider',function($routeProvide, $locationProvider){
+    weatherApp.config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider){
         $routeProvider
             .when("/", {
                 templateUrl: "./client/home/main.view.html"
