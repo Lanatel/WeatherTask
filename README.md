@@ -5,5 +5,5 @@
 3. В цій папці редаговано всі файли: дадано контролери, роути і тд.  Аpplication\src\WeatherApi\wwwroot\js
 4. Тут додано шаблони, які будуть викоритовуватись в залежності від URL Application\src\WeatherApi\client\home
 5. Створено випадаючий список, який показує знайдені міста Application\src\WeatherApi\client\home\forecast.view.html
-  ( Application\src\WeatherApi\wwwroot\js\home.controller.js тут є http запити для того ) 
+6. Створено фаблику з http запитами Application\src\WeatherApi\wwwroot\js\app.factory.js
   
