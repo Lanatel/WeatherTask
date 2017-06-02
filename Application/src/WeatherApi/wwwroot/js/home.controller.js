@@ -5,48 +5,22 @@
     weatherApp.controller('ForecastCtrl', ForecastCtrl);
 
     function ForecastCtrl($http) {
+
         const fc = this;
 
-        fc.name = "Forecast IO";
-        fc.getCities = function(val){
+        switch($routeParams.provider) {
+            case 'FORECAST_IO':
+                fc.providerName = 'Forecast.io';
+                break;
+            case 'WORLD_WEATHER' :
+                fc.providerName = 'World Weather';
+                break;
+        }
 
-            return $http.get('api/cities/search', {
-             params: {
-                byName : val
-             }
-            }).then(function(response){ console.log(response.data);
-
-                return response.data.map(function(item){
-            return item.description;
-            });
-        });
+        fc.getCities = function(val) {
+            return weatherFactory.getCities(val);
         };
+
     }
-
-
-    weatherApp.controller('WorldWeatherCtrl', WorldWeatherCtrl);
-
-
-    function WorldWeatherCtrl( $http) {
-        const fc = this;
-        fc.name = "World Weather";
-        console.log(fc.name);
-
-        fc.getCities = function(val){
-
-            return $http.get('api/cities/search', {
-             params: {
-                byName : val
-             }
-            }).then(function(response){ console.log(response.data);
-
-                return response.data.map(function(item){
-            return item.description;
-            });
-        });
-    };
-
-
-}
 
 })();

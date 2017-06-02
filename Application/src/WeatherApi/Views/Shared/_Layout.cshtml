@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" >
 <head>
     <meta name="viewport" content="width=device-width" />
     <base href="/">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
 
 </head>
-<body ng-controller="WeatherCtrl">
+<body ng-app="weatherApp">
     <nav class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <div class="navbar-header">
@@ -19,13 +19,13 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#/forecast-io">Forecast.io</a></li>
-        <li><a href="#/world weather">World Weather</a></li>
+        <li><a href="#/forecast/FORECAST_IO">Forecast.io</a></li>
+        <li><a href="#/forecast/WORLD_WEATHER">World Weather</a></li>
       </ul>
     </div><!-- /.nav-collapse -->
   </div><!-- /.container -->
 </nav><!-- /.navbar -->
-<div class="container" ng-app="weatherApp">
+<div class="container" >
 
         @RenderBody()
 
@@ -39,6 +39,7 @@
 
     <script src="~/js/app.module.js"></script>
     <script src="~/js/app.router.js"></script>
+    <script type="~/js/app.factory.js"></script>>
     <script src="~/js/home.controller.js"></script>
 
 </body>
