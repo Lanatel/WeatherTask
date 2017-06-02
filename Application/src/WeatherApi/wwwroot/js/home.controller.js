@@ -1,7 +1,6 @@
 (function () {
     'use strict';
 
-
     var weatherApp = angular.module('weatherApp');
 
     weatherApp.factory('forecastFactory', function ($http) {

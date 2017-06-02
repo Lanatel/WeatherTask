@@ -34,7 +34,7 @@ h4{
   height: 120px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 5s linear infinite;
-    margin-left: 45%;
+  margin-left: 45%;
 }
 
 @-webkit-keyframes spin {
