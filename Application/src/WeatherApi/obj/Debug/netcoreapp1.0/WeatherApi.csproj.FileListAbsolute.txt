@@ -6,3 +6,11 @@ C:\weatherApp\Test-task\Application\src\WeatherApi\bin\Debug\netcoreapp1.0\Weath
 C:\weatherApp\Test-task\Application\src\WeatherApi\obj\Debug\netcoreapp1.0\WeatherApi.AssemblyInfo.cs
 C:\weatherApp\Test-task\Application\src\WeatherApi\obj\Debug\netcoreapp1.0\WeatherApi.dll
 C:\weatherApp\Test-task\Application\src\WeatherApi\obj\Debug\netcoreapp1.0\WeatherApi.pdb
+C:\wt\Application\src\WeatherApi\bin\Debug\netcoreapp1.0\WeatherApi.deps.json
+C:\wt\Application\src\WeatherApi\bin\Debug\netcoreapp1.0\WeatherApi.runtimeconfig.json
+C:\wt\Application\src\WeatherApi\bin\Debug\netcoreapp1.0\WeatherApi.runtimeconfig.dev.json
+C:\wt\Application\src\WeatherApi\bin\Debug\netcoreapp1.0\WeatherApi.dll
+C:\wt\Application\src\WeatherApi\bin\Debug\netcoreapp1.0\WeatherApi.pdb
+C:\wt\Application\src\WeatherApi\obj\Debug\netcoreapp1.0\WeatherApi.AssemblyInfo.cs
+C:\wt\Application\src\WeatherApi\obj\Debug\netcoreapp1.0\WeatherApi.dll
+C:\wt\Application\src\WeatherApi\obj\Debug\netcoreapp1.0\WeatherApi.pdb
