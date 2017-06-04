@@ -6,7 +6,7 @@
     weatherApp.factory('forecastFactory', function ($http) {
         return {
             getCities : function(val){
-                return $http.get('api/cities/search', {
+                return $http.get('/api/cities/search', {
                     params: {
                         byName : val
                     }
@@ -16,14 +16,14 @@
             },
 
             getCoordinats : function(placeID) {
-                return $http.get('api/cities/'+placeID)
+                return $http.get('/api/cities/'+placeID)
                         .then(function(response){
                             return response.data;
                         });
                 },
 
             getForecast : function(placeCoords, provider){
-                return $http.get('api/forecast', {
+                return $http.get('/api/forecast', {
                     params: {
                         longitude : placeCoords.longitude,
                         latitude : placeCoords.latitude,
@@ -55,11 +55,13 @@
         fc.forecasts = [];
 
         fc.getCities = function(val) {
+            console.log(val);
             return forecastFactory.getCities(val);
         };
 
         fc.citySelected = function($item, $model, $label, $event)
         {
+            console.log($item.placeId);
             fc.loading = true;
             fc.loaded = false;
             fc.forecasts = [];
@@ -69,6 +71,7 @@
         var loadPlaceCoords = function(placeId){
             return forecastFactory.getCoordinats(placeId)
                 .then(function(result){
+                    console.log(result);
                     return getWeatherInfo(result);
                 })
         };
@@ -79,8 +82,8 @@
                     fc.forecasts[0] = result.currently;
                     fc.forecasts[0].img = chooseImage(fc.forecasts[0].cloudCover);
 
-                    result.futureForecast.forEach(function(item){
-                        fc.forecast.push(modifyItem(item));
+                    result.futureForecasts.forEach(function(item){
+                        fc.forecasts.push(modifyItem(item));
                     });
 
                     fc.loading = false;
@@ -90,6 +93,7 @@
 
         var modifyItem = function(item){
             item.temperature = item.temperatureMax;
+            item.apparentTemperature = item.ApparentTemperatureMax;
             item.img = chooseImage(item.cloudCover);
             return item;
         };

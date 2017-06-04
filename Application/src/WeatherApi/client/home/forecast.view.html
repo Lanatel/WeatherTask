@@ -13,40 +13,40 @@
 <div class="loader" ng-show="fc.loading"></div>
 
 <div class="row" ng-show="fc.loaded">
-    <!-- <div ng-repeat="item in fc.forecasts" class="col-sm-1"> -->
-    <div class="col-sm-1">
+     <div ng-repeat="item in fc.forecasts" class="col-sm-1">
         <div class="panel-group">
             <div class="panel panel-primary">
-                <div class="text-center panel-heading"> 27.02.19</div>
+                <div class="text-center panel-heading"> {{item.date}}</div>
                 <div class=" text-center panel-body">
-                    <img src="/images/weezle_sun.png" alt="cluod" width="100%">
-                    <p>67.6 &#8457;</p>
-                    <h6>67.6 &#8457;</h6>
+                    <img ng-src="/images/weezle_sun.png" alt="" width="100%">
+                    <p>{{item.temperature}} &#8457;</p>
+                    <h6>{{item.temperatureMin}}&#8457;</h6>
                 </div>
                     <div class=" text-center panel-body">
                         <p style="float: left; font-weight: bold; width: 70%">Apparent</p>
                         <img src="/images/temperature.png" alt=""  style="float: right;" width="30%">
                     </div><!-- body -->
                     <div class="text-center">
-                    <p> 34.5 &#8457;</p>
-                    <p> 34.5 &#8457;</p>
+                    <p>{{item.apparentTemperature}}&#8457;</p>
+                    <p>{{item.apparentTemperatureMin}}&#8457;</p>
                     </div>
                 <div class=" text-center panel-body panel-body-color1">
                     <div>
-                        <p style="float: right; width : 70% "> 0.67% </p>
+                        <p style="float: right; width : 70% ">{{item.humidity}}</p>
                         <img src="/images/humidity.png" alt=""  style="float: left;" width="30%">
                     </div>
                     <hr>
                     <div>
-                       <p style="float: right; width : 70% "> 1000mbar </p>
-                       <img src="/images/pressure.png" alt="k"  style="float: left;" width="30%">
+                       <p style="float: right; width : 70% ">{{item.pressure}}</p>
+                       <img src="/images/pressure.png" alt=""  style="float: left;" width="30%">
                     </div>
                     <hr>
                     <div >
-                       <p style="float: right; width : 70% ";> 10% </p>
-                       <img src="/images/cover_cloud.png" alt="k"  style="float: left;" width="30%">
+                       <p style="float: right; width : 70% ";>{{item.cloudCover}}</p>
+                       <img src="/images/cover_cloud.png" alt=""  style="float: left;" width="30%">
                     </div>
                 </div>
-        </div><!-- panel -->
-    </div><!-- delete -->
-</div><!-- /row -->
+            </div><!-- panel -->
+        </div><!-- /row -->
+    </div>
+</div>

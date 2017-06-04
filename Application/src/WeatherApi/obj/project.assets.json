@@ -10340,16 +10340,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\weatherApp\\Test-task\\Application\\src\\WeatherApi\\WeatherApi.csproj",
+      "projectUniqueName": "C:\\wt\\Application\\src\\WeatherApi\\WeatherApi.csproj",
       "projectName": "WeatherApi",
-      "projectPath": "C:\\weatherApp\\Test-task\\Application\\src\\WeatherApi\\WeatherApi.csproj",
-      "outputPath": "C:\\weatherApp\\Test-task\\Application\\src\\WeatherApi\\obj\\",
+      "projectPath": "C:\\wt\\Application\\src\\WeatherApi\\WeatherApi.csproj",
+      "outputPath": "C:\\wt\\Application\\src\\WeatherApi\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.0"
       ],
       "files": {
-        "lib/netcoreapp1.0/WeatherApi.dll": "C:\\weatherApp\\Test-task\\Application\\src\\WeatherApi\\bin\\placeholder\\netcoreapp1.0\\WeatherApi.dll"
+        "lib/netcoreapp1.0/WeatherApi.dll": "C:\\wt\\Application\\src\\WeatherApi\\bin\\placeholder\\netcoreapp1.0\\WeatherApi.dll"
       },
       "frameworks": {
         "netcoreapp1.0": {
