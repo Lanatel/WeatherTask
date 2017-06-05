@@ -23,10 +23,11 @@
                 },
 
             getForecast : function(placeCoords, provider){
+                var coords = placeCoords.latitude + "longitude="+placeCoords.longitude;
                 return $http.get('/api/forecast', {
                     params: {
-                        longitude : placeCoords.longitude,
-                        latitude : placeCoords.latitude,
+                        latitude : coords,
+                        //longitude : placeCoords.longitude,
                         source : provider
                     }
                 }).then(function(response){
@@ -85,7 +86,7 @@
                     result.futureForecasts.forEach(function(item){
                         fc.forecasts.push(modifyItem(item));
                     });
-
+                    fc.forecasts.length = 7;
                     fc.loading = false;
                     fc.loaded = true;
                 });
@@ -93,8 +94,13 @@
 
         var modifyItem = function(item){
             item.temperature = item.temperatureMax;
-            item.apparentTemperature = item.ApparentTemperatureMax;
+            item.apparentTemperature = item.apparentTemperatureMax;
             item.img = chooseImage(item.cloudCover);
+            item.apparentTemperatureMin = item.apparentTemperatureMin +'\u2109';
+            item.temperatureMin = item.temperatureMin +'\u2109';
+            if(fc.providerName == 'World Weather'){
+                delete item.apparentTemperatureMin;
+            };
             return item;
         };
 

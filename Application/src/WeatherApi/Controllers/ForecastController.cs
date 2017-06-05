@@ -16,7 +16,7 @@ namespace WeatherApi.Controllers
         const string FORECAST_API_KEY = "2c43986f39cf0dd6f5ce3a8378301aa2";
 
         [SuppressMessage("ReSharper", "InconsistentNaming")]
-        const string WORLD_WEATHER_API_KEY = "51142ce34654a6d658c7472fdc33a";
+        const string WORLD_WEATHER_API_KEY = "1918c3ee0f1845369ae192513170406";
 
         // GET: api/forecast?longitude&latitude&source
         public async Task<string> Get([FromQuery]float latitude, [FromQuery]float longitude, [FromQuery]string source)
@@ -101,7 +101,7 @@ namespace WeatherApi.Controllers
             using (var client = new HttpClient())
             {
                 var address = string.Format(
-                    "http://api.worldweatheronline.com/free/v2/weather.ashx?key={0}&q={1}%2C{2}&format=json&num_of_days=7&fx24=no&show_comments=no&tp=24",
+                    "http://api.worldweatheronline.com/premium/v1/weather.ashx?key={0}&q={1},{2}&format=json&num_of_days=7&fx24=no&show_comments=no&tp=24",
                     WORLD_WEATHER_API_KEY, latitude, longitude);
                 var response = await client.GetStringAsync(address).ConfigureAwait(false);
                 return formatWorldWeatherResponse(response);
